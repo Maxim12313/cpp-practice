@@ -1,4 +1,5 @@
 #!/bin/bash
+DATE=$(date +(%m/%d))
 
 mkdir solutions
 cp $1.cpp solutions/$2.cpp
