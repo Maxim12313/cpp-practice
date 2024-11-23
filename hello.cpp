@@ -17,7 +17,9 @@
 
 using namespace std;
 
-void solve() {}
+void solve() {
+    cout << "Hello world\n";
+}
 
 int main() {
     ios::sync_with_stdio(false);
