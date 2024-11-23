@@ -1,8 +1,8 @@
 #!/bin/bash
-DATE=$(date +(%m/%d))
-
+date=$(date +%m-%d)
+name="$2[$date].cpp"
 mkdir solutions
-cp $1.cpp solutions/$2.cpp
-git add solutions/$2.cpp
-git commit -m "auto add: $2.cpp"
+cp $1.cpp solutions/$name
+git add solutions/$name
+git commit -m "auto add: $name"
 rm -rf solutions
