@@ -18,14 +18,21 @@
 using namespace std;
 
 void solve() {
-    int n;
-    cin >> n;
-    string res = to_string(n);
-    vector<int> count(10, 0);
-    for (char c : res)
-        count[c - '0']++;
-    bool works = count[1] == 1 && count[2] == 2 && count[3] == 3;
-    cout << (works ? "Yes" : "No") << "\n";
+    string s;
+    cin >> s;
+    vector<int> ans;
+    int count = 0;
+    for (int i = 1; i < size(s); i++) {
+        if (s[i] == '|') {
+            ans.push_back(count);
+            count = 0;
+        } else {
+            count++;
+        }
+    }
+    for (int val : ans)
+        cout << val << " ";
+    cout << "\n";
 }
 
 int main() {
