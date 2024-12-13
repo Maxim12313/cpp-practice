@@ -1,69 +1,24 @@
-#include <algorithm>
-#include <cassert>
-#include <cfenv>
-#include <climits>
-#include <cmath>
-#include <cstdint>
-#include <deque>
-#include <iomanip>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <pthread.h>
-#include <queue>
-#include <set>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <utility>
-#include <vector>
+import sys
 
-using namespace std;
+input = sys.stdin.readline
+write = sys.stdout.write
 
-template <typename A, typename B> string to_string(pair<A, B> p) {
-    return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
-}
 
-template <typename A> string to_string(A v) {
-    bool first = true;
-    string res = "{";
-    for (const auto &x : v) {
-        if (!first) {
-            res += ", ";
-        }
-        first = false;
-        res += to_string(x);
-    }
-    res += "}";
-    return res;
-}
+def solve():
+    # make left as big as possible
+    # if curr > left + 1
+    # always swap, repeatedly too
+    s = [int(x) for x in input().strip()]
+    for i in range(1, len(s)):
+        for j in range(i, 0, -1):  # at most ~9 iterations
+            if not (s[j - 1] < s[j] - 1):
+                break
+            s[j - 1], s[j] = s[j] - 1, s[j - 1]
 
-struct Customer {
-    int l, r;
-    int idx;
-    bool operator<(const Customer &o) const {
-        return l < o.l;
-    }
-};
+    write("".join(map(str, s)) + "\n")
 
-void solve() {
-    int n;
-    cin >> n;
-    vector<Customer> customer(n);
-    for (int i = 0; i < n; i++) {
-        int a, b;
-        cin >> a >> b;
-        customer[i] = {a, b, i};
-    }
-    // nlogn + nlogk binary search of k
-}
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    // int t;
-    // cin >> t;
-    // while (t--)
-    solve();
-}
+if __name__ == "__main__":
+    t = int(input())
+    for i in range(t):
+        solve()
