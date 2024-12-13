@@ -1,5 +1,6 @@
 #!/bin/bash
 # same thing but for python, could add extra arg or extract from full with extension but less to type this way
+# distinct name to ensure no misuse
 date=$(date +%m-%d)
 
 # name in format name-m-d
