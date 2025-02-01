@@ -3,6 +3,7 @@
 #include <climits>
 #include <cmath>
 #include <deque>
+#include <functional>
 #include <iomanip>
 #include <iostream>
 #include <map>
@@ -15,25 +16,17 @@
 #include <utility>
 #include <vector>
 
+// Problem: A. Fibonacciness
+// Contest: Codeforces Round 998 (Div. 3)
+// Judge: Codeforces
+// URL: https://codeforces.com/contest/2060/problem/A
+// Memory Limit: 256
+// Time Limit: 1000
+// Start: Sat Feb  1 01:12:34 2025
+
 using namespace std;
 
-template <typename A> string to_string(A v) {
-    bool first = true;
-    string res = "{";
-    for (const auto &x : v) {
-        if (!first) {
-            res += ", ";
-        }
-        first = false;
-        res += to_string(x);
-    }
-    res += "}";
-    return res;
-}
-
-template <typename A, typename B> string to_string(pair<A, B> p) {
-    return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
-}
+#define all(A) begin(A) end(A)
 
 void solve() {}
 

@@ -1,5 +1,14 @@
 import sys
 
+
+# Problem: $(PROBLEM)
+# Contest: $(CONTEST)
+# Judge: $(JUDGE)
+# URL: $(URL)
+# Memory Limit: $(MEMLIM)
+# Time Limit: $(TIMELIM)
+# Start: $(DATE)
+
 input = sys.stdin.readline
 write = sys.stdout.write
 
