@@ -9,10 +9,22 @@ class Solution:
         n = len(matrix)
         # (r, c) -> (c, n - r) -> (n - r, n - c) -> (n - c, r)
         points = [
-            (r, c),
-            (c, n - r - 1),
-            (n - r - 1, n - c - 1),
-            (n - c - 1, r),
+            (
+                r,
+                c,
+            ),
+            (
+                c,
+                n - r - 1,
+            ),
+            (
+                n - r - 1,
+                n - c - 1,
+            ),
+            (
+                n - c - 1,
+                r,
+            ),
         ]
         temp = matrix[n - c - 1][r]
         i = len(points) - 1

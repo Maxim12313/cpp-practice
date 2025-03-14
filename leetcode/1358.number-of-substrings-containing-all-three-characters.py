@@ -5,7 +5,9 @@ from sortedcontainers import SortedDict, SortedSet
 
 # @leet start
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        
+    def numberOfSubstrings(self, s: str) -> int:
+        pass
+
+
 # @leet end
 
