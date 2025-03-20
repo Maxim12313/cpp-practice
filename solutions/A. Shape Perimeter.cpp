@@ -29,6 +29,7 @@ using ll = long long;
 #define all(A) begin(A) end(A)
 
 void solve() {
+
     int n, m;
     cin >> n >> m;
     vector<pair<int, int>> move(n);
