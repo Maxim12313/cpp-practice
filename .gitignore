@@ -1,4 +1,6 @@
 *.out
 *.dSYM
+*.txt
+leetcode
 # algo
-contest
+# contest
